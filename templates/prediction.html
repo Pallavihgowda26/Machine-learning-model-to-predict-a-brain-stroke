@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Brain-stroke classification</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/assets/css/prediction.css">
+    <link rel="stylesheet" href="../static/assets/css/owl.css">
+<!--
+
+Finance Business TemplateMo
+
+https://templatemo.com/tm-545-finance-business
+
+-->
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+     
+    
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="{{url_for('index')}}"><h2>Brain Stroke</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('index')}}">Home</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('login')}}">Login</a>
+              </li>                          
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('upload')}}">Upload</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('prediction')}}">Prediction</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('performance')}}">Performance_Analysis</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Prediction</h1>
+            <span>Brain Stroke Detection</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+      <div class="container">
+        
+        <div class="col-md-8 col-lg-6" style="margin-left:460px">
+            <section class='tabs-content'>
+              <br>
+              <br>
+              <h1>Prediction</h1>
+              <span>Brain Stroke Detection</span>
+          </div>
+                
+							<html>
+    <head>
+        
+		
+		 <style>
+            
+                  
+            
+            h1 {
+                color:#f44336;
+            }
+			b{
+			color: #2196F3;
+			}
+        </style>
+    </head>
+  <div style="margin-left:30px">
+    <body>
+         
+        <center><form  action="{{ url_for('predict')}}"  method="POST">
+          
+
+          <br>
+          <br>
+        <label><b>Gender:</b></label>
+            
+            <select name="gender" width="190" style="width: 190px">
+                <option name="gender" value="0">Male</option>
+                <option name="gender" value="1">Female</option>
+            </select>  
+            <br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><b>Age:</b></label>
+           
+             <input type="text"  width="190" style="width: 190px" name="age"/>
+            <br>
+			
+		       	<br>
+
+             <label><b>Hypertension:</b></label>
+           
+            <input type="text"  width="190" style="width: 190px" name="hypertension"/>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br>
+			
+		       	<br>
+             <label><b>Heart_Disease:</b></label>
+           
+            <input type="text"  width="190" style="width: 190px" name="heart_disease"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br>
+			
+		       	<br>
+             <label><b>Ever_Married:</b></label>
+            
+             <select name="ever_married" width="190" style="width: 190px">
+                 <option name="ever_married" value="0">Yes</option>
+                 <option name="ever_married" value="1">No</option>
+             </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+             <br>
+             <br>
+             <label><b>Work_Type:</b></label>
+            
+             <select name="work_type" width="190" style="width: 190px">
+                 <option name="work_type" value="0">Private</option>
+                 <option name="work_type" value="1">Self-employed</option>
+                 <option name="work_type" value="2">Govt_job</option>
+                 <option name="work_type" value="3">children</option>
+             </select>  &nbsp;&nbsp;&nbsp;&nbsp;
+             <br>
+             <br>
+             <label><b>Residence_Type:</b></label>
+            
+             <select name="residence_type" width="190" style="width: 190px">
+                 <option name="residence_type" value="0">Urban</option>
+                 <option name="residence_type" value="1">Rural</option>
+             </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+             <br>
+             <br>
+
+             <label><b>Avg_Glucose_Level:</b></label>
+           
+             <input type="text"  width="190" style="width: 190px" name="avg_glucose_level"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+             <br>
+       
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label><b>BMI:</b></label>
+           
+              <input type="text"  width="190" style="width: 190px" name="bmi"/>
+              <br>
+        
+               <br>
+               <label><b>smoking_status:</b></label>
+            
+               <select name="smoking_status" width="190" style="width: 190px">
+                   <option name="smoking_status" value="0">Formerly Smoked</option>
+                   <option name="smoking_status" value="1">Never Smoked</option>
+                   <option name="smoking_status" value="2">Smokes</option>
+                   <option name="smoking_status" value="3">Unknown</option>
+               </select>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+               <br>
+               <br>
+               
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><b>Model:</b></label>
+            
+               <select name="model" width="190" style="width: 190px">
+                   <option name="model" value="RandomForestClassifier">RandomForestClassifier</option>
+                   <option name="model" value="BaggingClassifier">BaggingClassifier</option>
+                 
+               </select>    
+               <br>
+               <br>
+               
+               <div style="margin-left:30px">
+          <center>  <button type="submit" class="btn btn-primary">Predict </button></center>
+          </div>
+        </form></center>
+		
+        <br>
+        <br>
+        <center> <h1>Model : {{ model }}</h1></center>
+        <br>
+	    <center> <h1>Prediction is : {{ prediction_text }}</h1></center>
+       
+    </body>
+</div>
+</html>
+
+
+
+            </section>
+          </div>
+        </div>
+      </div>
+   
+
+     <br>
+     <br>
+    
+
+
+    <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+           
+        </div>
+      </div>
+    </footer>
+    
+    <div class="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+             
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="../static/assets/js/custom.js"></script>
+    <script src="../static/assets/js/owl.js"></script>
+    <script src="../static/assets/js/slick.js"></script>
+    <script src="../static/assets/js/accordions.js"></script>
+
+    
+
+  </body>
+</html>

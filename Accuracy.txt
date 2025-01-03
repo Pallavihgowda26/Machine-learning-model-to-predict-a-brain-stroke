@@ -1,0 +1,11 @@
+A Machine Learning Model to Predict a Diagnosis of Brain Stroke.
+
+Algorithm / Model Used: Random Forest Classifier
+
+Accuracy Train score: 100% and test score: 99%
+*****************************************************
+Algorithm / Model Used: Bagging Classifier
+
+Accuracy Train score: 99% and test score: 98%
+
+

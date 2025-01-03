@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Brain-stroke classification</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/assets/css/preview.css">
+    <link rel="stylesheet" href="../static/assets/css/owl.css">
+<!--
+
+Finance Business TemplateMo
+
+https://templatemo.com/tm-545-finance-business
+
+-->
+<style>    
+ 
+  .scrollable {
+      width: 1200px;
+      height: 1000px;
+      overflow: auto;
+      scroll-margin-right: 20px;
+  }
+</style>
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+     
+    
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="{{url_for('index')}}"><h2>Brain Stroke</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('index')}}">Home</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('login')}}">Login</a>
+              </li>                          
+              <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('upload')}}">Upload</a>
+              </li> 
+            
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Preview</h1>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </br>
+</br>
+</br>
+
+ 
+      <div class="container">
+        
+        <div class="col-md-8 col-lg-6" style="margin-left:400px">
+            <section class='tabs-content'>
+              <h1>Preview</h1>
+              <span>Brain Stroke Detection</span>
+              <div class="container">
+        <body id="page-top">
+        
+          <!-- Navigation -->
+         
+        
+          <!-- Contact Section -->
+          <section class="page-section" id="contact">
+       
+             <br>
+           <br>
+              <!-- Contact Section Heading -->
+              
+        
+              <!-- Icon Divider -->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                 
+                </div>
+                <div class="divider-custom-line"></div>
+              </div>
+        
+              <!-- Contact Section Form -->
+              <div class="row" style="margin-left:-900px">
+             
+                <div class="col-lg-8 mx-auto">
+          <div class="scrollable"> 
+                  <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            {{ df_view.to_html(classes="table striped",na_rep="-") | safe}}
+
+
+          </div> 
+                </div>
+              
+              </div>
+               
+          </section>
+          </br>
+         
+         
+         <div class="form-group" style="padding:0px 250px 10px 40px;height:200px">
+                            <input style="margin-left:-200px" type="button" onclick="hideLoader()" class="btn btn-primary" value="Click to Train | Test" />
+                  <div id="loading" style="display:None;margin-top:552950px"></div>
+                  </div>
+        
+        
+             
+                  
+
+                  
+         
+          
+          <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+           <script type='text/javascript'>
+           
+        function hideLoader() {  
+        $('#loading').show(0).delay(10000).hide(0,function(){
+             alert("Training finished!");
+           window.location = "{{url_for('prediction')}}";
+           });    
+        }
+        
+        
+           </script>
+           
+        
+        </body>
+
+      </div>
+                
+              
+            </section>
+          </div>
+        </div>
+      </div>
+   
+
+    </br>
+  </br>
+</br>
+</br>
+    
+
+
+    <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+           
+        </div>
+      </div>
+    </footer>
+    
+    <div class="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+             
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="../static/assets/js/custom.js"></script>
+    <script src="../static/assets/js/owl.js"></script>
+    <script src="../static/assets/js/slick.js"></script>
+    <script src="../static/assets/js/accordions.js"></script>
+
+    
+
+  </body>
+</html>
